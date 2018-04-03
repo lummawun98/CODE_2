@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Minorities At The New School"
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: 7.3, label: "Black/African American"},
+			{y: 21.9, label: "Asian"},
+			{y: 17.04, label: "Hispanic/Latino"},
+			{y: 5.1, label: "Multi-race (not Hispanic/Latino)"},
+			{y: 0.3, label: "Native Hawaiian/ Pacific Islander"}
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

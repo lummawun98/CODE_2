@@ -26,6 +26,8 @@ function draw() {
   background(51);
   for (var i = 0; i < vehicles.length; i++) {
     var v = vehicles[i];
+    textFont(myFont);
+    textSize(30);
     v.behaviors(); //drawing and updating the moving behavior 
     v.update(); //drawing update (allowing the scene to refresh )
     v.show(); //showing the particles and their behaviors 

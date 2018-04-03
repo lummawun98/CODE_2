@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Code 2 Midterm</title>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="Chart.js"></script>
+	</head>
+	<h1> School of Visual Arts </h1>
+	<body>
+		<canvas id="mycanvas" width="256" height="256" style = "margin-left:3%; margin-top: 20%">
+			
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: .5,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "American Indian/Alaskan Native"
+					},
+
+					{
+						value: 5.3,
+						color: "red",
+						highlight: "darkred",
+						label: "Hispanic/Latino"
+
+					},
+					{
+						value: 13.7,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Asian"
+					},
+
+					{
+						value: .3,
+						color: "purple",
+						highlight: "lightpurple",
+						label: "Native Hawaiian/ Pacific Islander"
+
+					},
+					{
+						value: 5.9,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Black/African American"
+
+
+					}
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data);
+			});
+		</script>
+	</body>
+</html>
