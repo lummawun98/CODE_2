@@ -1,20 +1,20 @@
 
-
-var siblings;
+let shows;
 
 function preload() {
-  siblings = loadJSON("siblings.json");
+  shows = loadJSON('shows.json');
 }
 
 function setup() {
-  createCanvas(400, 400);
-  
-  
+ createCanvas(800, 800);
+ 
 }
+  
 
-function draw() {
-  background(0);
-  fill(siblings.r, siblings.g, siblings.b);
-  text(siblings.name, 10, 50);
 
-}
+ function draw() {
+ background(0);
+//   fill(siblings.r, siblings.g, siblings.b);
+//   text(siblings.name, 10, 50);
+
+ }
