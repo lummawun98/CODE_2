@@ -1,29 +1,21 @@
-// make an empty array to hold our tiles
-let tiles = [];
-let tileSize = 400;
+class LMTile extends Tile {
 
-function preload() {
-  // let table = loadTable('https://dl.dropboxusercontent.com/s/cgrl2ekchqrf9hp/Untitled%20form.csv?dl=1&raw=1', 'csv', 'header');
-  let table = loadTable('https://dl.dropboxusercontent.com/s/mrq421mkmg31wng/survey.csv?dl=1&raw=1', 'csv', 'header');
-  Tile.prototype.table = table;
-}
+  // Do you feel lonely?
 
-function setup() {
-  tiles.push(new JBTile(0, 0, tileSize));
 
-  createCanvas(tileSize * 1, tileSize * 1);
-
-  noLoop();
-}
-
-function draw() {
-  background(249, 245, 121);
-  // for (var i = 0; i < tiles.length; i++) {
-  //   tiles[i].update();
-  //   tiles[i].display();
-  // }
+  display() {
+  super.display();
 
   noStroke();
+  fill(255, 253, 139)
+  rect(0, 0, 400, 400); // background
+
+
+  //background(249, 245, 121);
+
+    // call super class' display method so we get our
+    // clean matrix and translation
+
   fill(255);
   rect(36, 300, 330, 3); // 1 from bottom
   rect(36, 250, 330, 3); // 2 from bottom
@@ -58,20 +50,26 @@ function draw() {
   text(' what would you be?', 100, 57);
 
   //footer
-  
   textSize(22);
   text('Clothing Item', 133, 350);
 
-   //numbers 
+  //bars
+  textSize(12);
+  text('Shoes', 41, 248);
+  text('Bottoms', 110, 147);
+  text('Outerwear', 173, 277);
+  text('Tops', 255, 277);
+  text('Accessories', 311, 180);
 
+  //numbers 
   textSize(22);
   text('0', 12, 310);
   text('2', 12, 255);
   text('4', 12, 205);
   text('6', 12, 155);
   text('8', 12, 105);
-  
 
+    super.display();
+
+  }
 }
-
-
